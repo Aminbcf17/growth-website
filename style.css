@@ -1,0 +1,462 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+:root{
+    --primary-color:#3f8ed8;
+    --secondary-color:#000000;
+    --grey-bg-color:#ded8d8;
+    --light-black-bg-color:	#232b2b;
+}
+
+*,*::before,*::after{
+    box-sizing: border-box;
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+ul{
+    list-style: none;
+}
+img{
+    max-width: 100%;
+}
+a{
+    text-decoration: none;
+    color: #000000;
+
+}
+/* primary header primary navbar */
+.primary__header{
+    background-color: #fff;
+    padding: 1rem 0;
+}
+.flex-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.primary__header__navbar__list{
+    display: flex;
+    gap: 1.8rem;
+}
+.primary__header ul li a{
+    padding: 0.8rem 2rem;
+    font-weight: 600;
+    transition: 0.5s;
+    position: relative;
+    display: inline-block;
+    transition: 0.5s;
+}
+.primary__header ul li a::after {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 0;
+    
+    height: 2px;
+    display: block;
+    transition: 0.5s;
+    background-color: var(--primary-color);
+    
+}
+.primary__header ul li a:hover{
+    color: var(--primary-color);
+}
+.primary__header ul li a:hover::after{
+   
+    width: 100%;
+    
+    
+
+
+}
+.primary__header ul li .btn:hover::after{
+    width: 0;
+
+}
+.primary__header ul li a i {
+    margin-right: 0.5rem;
+}
+/* hero section */
+.hero{
+    padding: 1rem 0;
+}
+.hero .container{
+    min-height: 550px;
+    background-image: url(images/hero-bg.png);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: contain;
+}
+.hero-wrapper{
+    width: 60%;
+}
+ .hero-wrapper .hero-text{
+    width: 80%;
+    text-align: left;
+    margin-bottom: 1.5rem;
+}
+/* video section */
+.bg-black{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 2rem 0;
+    background-color: black;
+}
+.video-heading{
+    color: white;
+    width: 60%;
+    text-align: center;
+}
+/*  testimonial section*/
+.testimonials{
+    padding: 1rem 0;
+}
+.testimonials .testimonial-heading{
+    width: 70%;
+    margin-inline: auto;
+    text-align: center;
+}
+.testimonials-grid{
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+    grid-auto-rows: 300px;
+    gap: 1rem;
+}
+.testimonials-grid > *{
+    background-color: var(--grey-bg-color);
+    color: var(--light-black-bg-color);
+    padding: 1rem 0.8rem;
+    border-radius: 10px;
+}
+.card-name{
+    font-weight: bold;
+    margin-top: 4rem;
+}
+/* pricing section */
+.pricing{
+    padding: 1rem 0;
+}
+.small-cn{
+    width: 50%;
+    margin-inline: auto;
+    text-align: center;
+}
+.pricing-grid{
+    width: 80%;
+    margin-inline: auto;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+
+    gap: 0.8rem;
+}
+.pricing-card{
+    border-radius: 1rem;
+    padding: 2rem 3rem;
+}
+.pricing-card__header{
+    margin-top: 0.5rem;
+}
+.pricing-card__body{
+    margin: 1rem 0;
+}
+.pricing-card__body .btn{
+    margin: 1rem 0;
+}
+.pricing-card__body ul li i{
+  margin-right: 0.5rem;
+}
+/* FAQ Section */
+.faq{
+    padding: 2rem 0;
+}
+.container-small{
+    width: 65%;
+    margin-inline:auto;
+}
+.faq__group{
+    border-bottom: 1.5px solid black;
+    padding-bottom: 1rem;
+}
+.faq__group__header{
+    position: relative;
+    padding: 1.6rem 0;
+    margin-bottom: 0.85rem;
+}
+.faq__group__header h4{
+    font-weight: 600;
+    width: 90%;
+}
+.faq__group__header i{
+    position: absolute;
+    top: 1.4rem;
+    right: 4px;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+.faq__group__body{
+    display: none;
+}
+.faq__group__body.open{
+    display: block;
+}
+.faq .faq__menu{
+    max-width: 400px;
+    margin-inline: auto;
+    display: flex;
+    /* gap: 1.5rem; */
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 0.9rem;
+    background-color: #ddd;
+    cursor: pointer;
+}
+.faq .faq__menu li{
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+.faq .faq__menu li.active{
+    background-color: var(--primary-color);
+    color: white;
+}
+/* footer part */
+.footer{
+   color: #fff;
+    padding: 2.5rem 0;
+}
+.footer h4{
+    margin-bottom: 10px;
+}
+footer ul li{
+    line-height: 2.5;
+}
+.footer ul li a{
+    color: #fff;
+}
+.footer i{
+    font-size: 1.5rem;
+    margin-right: 10px;
+}
+.footer__card{
+    background-color: white;
+    color: black;
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+
+}
+.footer__card .btn{
+    border: none;
+    margin-top: 10px;
+}
+.footer__card input{
+    width: 100%;
+    margin-top: 1rem;
+    height: 30px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+.footer__grid{
+    display: grid;
+    grid-template-columns: 2fr repeat(3,1fr);
+    gap: 2rem;
+    justify-items: center;
+    align-items: center;
+}
+.footer i{
+    cursor: pointer;
+}
+
+
+/* utility classes */
+.container{
+    width: 85%;
+    margin-inline: auto;
+}
+.container-small{
+    width: 65%;
+    margin-inline: auto;
+    
+}
+/* button class */
+.btn{
+    display: inline-block;
+    padding: 0.9rem 1.8rem;
+    background-color: var(--grey-bg-color);
+    cursor: pointer;
+    border-radius: 0.8rem;
+    text-decoration: none;
+    text-align: center;
+}
+
+.btn:hover{
+    opacity: 0.85;
+}
+.btn-primary{
+    background-color: var(--primary-color);
+    color: white;
+}
+.btn-dark{
+    background-color: #000000;
+    color: #fff;
+}
+.btn-block{
+    display: block;
+    width: 100%;
+}
+/* text classes */
+.text-xxl{
+    font-size: 3rem;
+    line-height: 1.2;
+    font-weight: 600;
+    margin: 3rem 0 1.5rem;
+}
+.text-xl{
+    font-size: 2.2rem;
+    font-weight: normal;  
+    line-height: 1.4; 
+     margin: 3rem 0 1.5rem;
+}
+.text-large{
+    font-size: 1.8rem;
+    line-height: 1.4;
+    font-weight: normal;
+    margin: 2rem 0 1.4rem;
+
+}
+.text-medium{
+    font-size: 1.2rem;
+    line-height: 1.4;
+    font-weight: normal;
+    margin: 1.5rem 0 .8rem;
+}
+.text-small{
+    font-size: 1rem;
+    line-height: 1.4;
+    font-weight: normal;
+    margin: 1rem 0 .5rem;
+}
+/* background */
+.bg-primary {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+.bg-light {
+    background-color: var(--grey-bg-color);
+    color: #333;
+}
+.bg-d{
+    background-color: black;
+    color: white;
+}
+.bg-dark{
+    background-color: var(--light-black-bg-color);
+    color: rgb(255, 255, 255);
+} 
+/* humburger menu  button*/
+.humburger-button{
+    display: none;
+    background: none;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1000;
+
+}
+.humburger-button .hamburger-line{
+    width: 30px;
+    height: 3px;
+    background-color: #333;
+    margin: 6px 0;
+}
+.mobile-menu{
+    position:fixed;
+    top:0;
+    right:-3000px;
+    width: 250px;
+    height: 100%;
+    z-index: 100;
+    background-color: #fff;
+    box-shadow:  0 0 10px rgba(0,0,0,0.2);
+    transition: right 0.3s ease-in-out;
+}
+.mobile-menu.active{
+    right: 0;
+}
+.mobile-menu ul li{
+    margin: 2rem 1rem;
+}
+.mobile-menu ul li:first-child{
+    margin-top: 5rem;
+}
+
+/* media queries */
+@media (max-width:960px){
+    .text-xxl{
+        font-size: 2.5rem;
+    }
+  
+}
+@media (max-width:700px){
+    
+    .primary__header__navbar__list{
+        display: none;
+    }
+    .primary__header .humburger-button{
+        display: block;
+    }
+    .hero{
+        padding: 1rem;
+    }
+   .hero-wrapper{
+    width: 100%;
+   }
+   .hero-wrapper .hero-text{
+    width: 100%;
+   }
+   .testimonials-grid{
+    grid-auto-flow: row;
+    grid-auto-rows: 1fr;
+
+   }
+   .pricing-grid{
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2,1fr);
+   }
+   .footer__grid{
+    grid-template-columns: 1fr;
+
+   }
+
+   .hero .container {
+    background: url(images/hero-bg-mobile.png) no-repeat;
+    background-size: 350px 400px;
+    background-position: bottom;
+    height: 900px;
+  }
+  .video .video-heading{
+    font-size: 1.8rem;
+  }
+  .footer__grid>*{
+    text-align: center;
+  }
+   
+    
+}
+@media (max-width:500px){
+    .hero .hero-buttons a {
+        display: block;
+        margin-bottom:1rem ;
+    }
+    
+}
